@@ -1,0 +1,73 @@
+$font-stack: Caveat,
+cursive;
+$regColor: #ffc600;
+
+html,
+body {
+    font: 100% $font-stack;
+    font-size: .9rem;
+    background: url("imgs/drums-630566_1920.jpg") bottom center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+// Centering the button group
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+// Individual key styles
+.key {
+    border: .4rem solid black;
+    border-radius: 1.5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: $regColor;
+    box-shadow: 0 0 1rem $regColor;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: $regColor;
+}
+
+.pcOnly {
+    display: none;
+}
+
+@media (max-width: 900) {
+    .keys {
+        display: none;
+    }
+
+    .key {
+        display: none;
+    }
+
+    .pcOnly {
+        display: block;
+    }
+}

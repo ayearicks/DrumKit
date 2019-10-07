@@ -1,6 +1,9 @@
 const keys = Array.from(document.querySelectorAll('.key'));
 keys.forEach(key => key.addEventListener('transitionEnd', removeTransition));
 window.addEventListener('keydown', playSound);
+window.addEventListener('keyup', removeTransition);
+
+
 
 function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
