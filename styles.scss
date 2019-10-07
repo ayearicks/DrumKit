@@ -58,7 +58,27 @@ kbd {
     display: none;
 }
 
-@media (max-width: 900) {
+@media (max-width: 900px) {
+    .keys {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .key {
+        width: 7rem;
+    }
+
+}
+
+@media (max-width: 770px){
+    .key {
+        width: 5rem;
+    }
+}
+
+@media (max-width: 625px) {
     .keys {
         display: none;
     }
@@ -67,7 +87,16 @@ kbd {
         display: none;
     }
 
+    body {
+        min-height: 100vh;
+    }
+
     .pcOnly {
-        display: block;
+        display: flex;
+        text-align: center;
+        padding-top: 10rem;
+        color: $regColor;
+        font-size: 2rem;
+
     }
 }

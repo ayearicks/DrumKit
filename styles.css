@@ -63,15 +63,48 @@ kbd {
   display: none;
 }
 
-@media (max-width: 900) {
+@media (max-width: 900px) {
+  .keys {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .key {
+    width: 7rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .key {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 625px) {
   .keys {
     display: none;
   }
   .key {
     display: none;
   }
+  body {
+    min-height: 100vh;
+  }
   .pcOnly {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    padding-top: 10rem;
+    color: #ffc600;
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

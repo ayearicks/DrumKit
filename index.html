@@ -8,6 +8,12 @@
         <title>Drum Kit</title>
     </head>
     <body>
+        <div class="pcOnly">
+            <h3>We're sorry. This app is currently only available for Desktop Users. Please check
+                back soon!
+            </h3>
+        </div>
+
         <div class="keys">
             <div data-key="65" class="key">
                 <kbd>A</kbd><span class="sound">clap</span>
@@ -34,13 +40,8 @@
                 <kbd>K</kbd><span class="sound">tom</span>
             </div>
             <div data-key="76" class="key">
-                <kbd>L</kbd><span class="sound">tink</span>
+                <kbd>L</kbd><span class="sound">block</span>
             </div>
-        </div>
-        <div class="pcOnly">
-            <h3>We're sorry. This app is currently only available for Desktop Users. Please check 
-                back soon!
-            </h3>
         </div>
 
         <audio data-key="65" src="sounds/clap.wav"></audio>
@@ -51,7 +52,7 @@
         <audio data-key="72" src="sounds/ride.wav"></audio>
         <audio data-key="74" src="sounds/snare.wav"></audio>
         <audio data-key="75" src="sounds/tom.wav"></audio>
-        <audio data-key="76" src="sounds/tink.wav"></audio>
+        <audio data-key="76" src="sounds/block.wav"></audio>
 
 
         <script type="text/javascript" src="drums.js"></script>
