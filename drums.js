@@ -1,22 +1,23 @@
+// 
 const keys = Array.from(document.querySelectorAll('.key'));
-keys.forEach(key => key.addEventListener('transitionEnd', removeTransition));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', playSound);
 
-function playSound(note){
-    const audio = document.querySelector(`audio[data-key="${note.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${note.keyCode}"]`);    
-    if (!audio) {
-        return;
-    }
+// Plays sound according to key pressed
+function playSound(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    // When the audio stops, stop the function
+    if (!audio) {return;}
+    // Class for adding stylized changes to buttons
     key.classList.add('playing');
+    // Restarts sound loop, and plays
     audio.currentTime = 0;
     audio.play();
-    
-};
+}
 
-function removeTranstion(note){
-    if (note.propertyName !== 'transform'){
-        return;
-    }
-    key.classList.remove('playing');
-};
+// Function to remove class when sound is done
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') {return;}
+    this.classList.remove('playing');
+}
