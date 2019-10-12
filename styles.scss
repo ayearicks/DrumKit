@@ -36,12 +36,14 @@ body {
     text-shadow: 0 0 .5rem black;
 }
 
+// Key highlight
 .playing {
     transform: scale(1.1);
     border-color: $regColor;
     box-shadow: 0 0 1rem $regColor;
 }
 
+//letter styles
 kbd {
     display: block;
     font-size: 4rem;
@@ -54,11 +56,13 @@ kbd {
     color: $regColor;
 }
 
-.pcOnly {
+// For mobile users
+.turnDevice {
     display: none;
 }
 
-@media (max-width: 900px) {
+// Responsive - Desktops
+@media (max-width: 1200px) {
     .keys {
         display: flex;
         flex-wrap: wrap;
@@ -69,20 +73,28 @@ kbd {
     .key {
         width: 7rem;
     }
-
 }
 
-@media (max-width: 770px){
+// Responsive - Tablets, Landscape Style Devices
+@media (max-width: 850px) {
     .key {
         width: 5rem;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
     }
-}
 
-@media (max-width: 625px) {
-    .keys {
+    kbd {
         display: none;
     }
 
+    .sound {
+        font-weight: 700;
+    }
+}
+
+// Responsive - Portrait
+@media (max-width: 500px) {
+    .keys,
     .key {
         display: none;
     }
@@ -91,12 +103,12 @@ kbd {
         min-height: 100vh;
     }
 
-    .pcOnly {
+    .turnDevice {
         display: flex;
         text-align: center;
-        padding-top: 10rem;
+        padding-top: 25rem;
         color: $regColor;
         font-size: 2rem;
-
+        font-weight: 700;
     }
 }

@@ -59,11 +59,11 @@ kbd {
   color: #ffc600;
 }
 
-.pcOnly {
+.turnDevice {
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .keys {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -81,30 +81,37 @@ kbd {
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 850px) {
   .key {
     width: 5rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  kbd {
+    display: none;
+  }
+  .sound {
+    font-weight: 700;
   }
 }
 
-@media (max-width: 625px) {
-  .keys {
-    display: none;
-  }
+@media (max-width: 500px) {
+  .keys,
   .key {
     display: none;
   }
   body {
     min-height: 100vh;
   }
-  .pcOnly {
+  .turnDevice {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     text-align: center;
-    padding-top: 10rem;
+    padding-top: 25rem;
     color: #ffc600;
     font-size: 2rem;
+    font-weight: 700;
   }
 }
 /*# sourceMappingURL=styles.css.map */
