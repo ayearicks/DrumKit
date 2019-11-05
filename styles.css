@@ -9,19 +9,11 @@ body {
 }
 
 .keys {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   min-height: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .key {
@@ -30,7 +22,6 @@ body {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  -webkit-transition: all .07s ease;
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
@@ -40,11 +31,9 @@ body {
 }
 
 .playing {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   border-color: #ffc600;
-  -webkit-box-shadow: 0 0 1rem #ffc600;
-          box-shadow: 0 0 1rem #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
 }
 
 kbd {
@@ -65,16 +54,10 @@ kbd {
 
 @media (max-width: 1200px) {
   .keys {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
   }
   .key {
     width: 7rem;
@@ -104,8 +87,6 @@ kbd {
     min-height: 100vh;
   }
   .turnDevice {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     text-align: center;
     padding-top: 25rem;
@@ -114,4 +95,3 @@ kbd {
     font-weight: 700;
   }
 }
-/*# sourceMappingURL=styles.css.map */
