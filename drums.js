@@ -1,10 +1,10 @@
 const keys = Array.from(document.querySelectorAll('.key'));
 const touchKey = Array.from(document.querySelectorAll('.key'));
-const touchText = Array.from(document.querySelectorAll('.sound'));
+// const touchText = Array.from(document.querySelectorAll('.sound'));
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 // Listen for Touch
 touchKey.forEach(touch => touch.addEventListener('touchstart', touchSound, true));
-touchText.forEach(touchWord => touchWord.addEventListener('touchstart', touchSound, true));
+// touchText.forEach(touchWord => touchWord.addEventListener('touchstart', touchSound, true));
 // Listen for Keyboard
 window.addEventListener('keydown', keySound);
 

@@ -32,8 +32,8 @@ body {
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: #72b2e6;
+  box-shadow: 0 0 1rem #72b2e6;
 }
 
 kbd {
@@ -45,7 +45,7 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: #72b2e6;
 }
 
 .turnDevice {
@@ -90,7 +90,7 @@ kbd {
     display: flex;
     text-align: center;
     padding-top: 25rem;
-    color: #ffc600;
+    color: #72b2e6;
     font-size: 2rem;
     font-weight: 700;
   }
