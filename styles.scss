@@ -76,7 +76,7 @@ kbd {
 }
 
 // Responsive - Tablets, Landscape Style Devices
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     .key {
         width: 5rem;
         padding: 20px;
@@ -89,6 +89,13 @@ kbd {
 
     .sound {
         font-weight: 700;
+    }
+
+    // For Tablets that are slightly taller
+    @media (max-height: 1300px){
+        kbd {
+            display: block;
+        }
     }
 }
 
@@ -106,9 +113,9 @@ kbd {
     .turnDevice {
         display: flex;
         text-align: center;
-        padding-top: 25rem;
-        color: $regColor;
-        font-size: 2rem;
+        padding-top: 20rem;
+        color: #ffffff;
+        font-size: 3rem;
         font-weight: 700;
     }
 }
