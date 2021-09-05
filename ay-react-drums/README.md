@@ -38,6 +38,7 @@ This project was originally featured on [30 Days of Javascript](https://javascri
 - Sass
 - Javascript
 - React
+- [React Img Mapper](https://www.npmjs.com/package/react-img-mapper)
 - Visual Studio Code
 - Chrome
 
