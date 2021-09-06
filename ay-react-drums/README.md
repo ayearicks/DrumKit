@@ -38,7 +38,7 @@ This project was originally featured on [30 Days of Javascript](https://javascri
 - Sass
 - Javascript
 - React
-- [React Img Mapper](https://www.npmjs.com/package/react-img-mapper)
+- [Howler.js](https://github.com/goldfire/howler.js)
 - Visual Studio Code
 - Chrome
 

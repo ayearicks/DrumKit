@@ -1,10 +1,13 @@
-import Home from './components/home/Home';
+import Header from './components/header/Header'
+import Drumset from './components/drumset/Drumset';
 import './app.scss';
 
 const App = () => {
+
   return (
     <div className="App">
-      <Home />      
+      <Header />      
+      <Drumset />
     </div>
   );
 }

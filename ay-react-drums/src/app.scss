@@ -5,6 +5,13 @@
   --blueGreen: #94D1BE;
 }
 
-* {
-  margin: 0;
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--blackOlive);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+

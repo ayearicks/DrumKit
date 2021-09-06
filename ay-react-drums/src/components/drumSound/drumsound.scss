@@ -1,0 +1,17 @@
+button {
+    flex-direction: row;
+    font-size: 30px;
+    background-color: var(--lightCyan);
+    border: 5px solid var(--blueGreen);
+    border-radius: 5px;
+    color: var(--blackOlive);
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: var(--blackOlive);
+    color: var(--opal);
+    transform: scale(1.2);
+}

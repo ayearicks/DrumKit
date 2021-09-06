@@ -1,65 +1,107 @@
 import './drumset.scss'
-import ImageMapper from 'react-img-mapper'
-import { useState, useEffect } from 'react'
-import { AREA_MAP, IMAGE_URL } from '../data/Data'
+import DrumSound from '../drumSound/DrumSound'
+
+import HighHat from '../../7sounds/highhat.wav'
+import OpenHighHat from '../../sounds/openhat.wav'
+import Snare from '../../sounds/snare.wav'
+import Tom1 from '../../sounds/tom1.wav'
+import Tom2 from '../../sounds/tom2.wav'
+import FloorTom from '../../sounds/floortom.wav'
+import Kick from '../../sounds/kick.wav'
+import Crash16 from '../../sounds/crash16.wav'
+import Ride from '../../sounds/ride.wav'
+import RideBell from '../../sounds/ridebell.wav'
+import Crash14 from '../../sounds/crash14.wav'
+
+const Drumset = () => {
 
 
 
-const Drumset = (props) => {
-   let [drumTrigger, isDrumTrigger] = useState(false);
-   let [drumClick, isDrumClick] = useState('');
-   let [drumKey, isDrumKey] = useState(0);
-
-
-//    useEffect(() => {
-//        keySound.addEventListener(isDrumKey, removeTransition);
-//    });
-
-
-    // prevent continuous sound/events
-    const handleClick = (e) => {
-        e.preventDefault();
+const drumMap = [
+    {
+        name: 'high-hat',
+        sound: HighHat,
+        letter: 'h',
+        key: 72
+    },
+    {
+        name: 'open-high-hat',
+        sound: OpenHighHat,
+        letter: 'g',
+        key: 71
+    },
+    {
+        name: 'snare',
+        sound: Snare,
+        letter: 'a',
+        key: 65
+    },
+    {
+        name: 'tom1',
+        sound: Tom1,
+        letter: 'q',
+        key: 81
+    },
+    {
+        name: 'tom2',
+        sound: Tom2,
+        letter: 'w', 
+        key: 87
+    },
+    {
+        name: 'floor-tom',
+        sound: FloorTom,
+        letter: 'e',
+        key: 69
+    },
+    {
+        name: 'kick',
+        sound: Kick,
+        letter: 'x',
+        key: 88
+    },
+    {
+        name: 'crash16',
+        sound: Crash16,
+        letter: 't',
+        key: 84
+    },
+    {
+        name: 'ride',
+        sound: Ride,
+        letter: 'k',
+        key: 75
+    },
+    {
+        name: 'ride-bell',
+        sound: RideBell,
+        letter: 'l',
+        key: 76
+    },
+    {
+        name: 'crash14',
+        sound: Crash14,
+        letter: 'y',
+        key: 89
     }
- 
-//     // Mouse click
-//    const clickDrum = () => {
-//        if(!isDrumTrigger) {
-//            this.audio.play({props.drummap.id.sound});
-//            this.audio.currentTime = 0;
-//            handleClick();
-//        }
-//     }
+]
 
-    // Keyboard click
-    const drumKeyClick = () => {
-        if (!drumKey) {
-            this.audio.play({});
-            this.audio.currentTime = 0;
-            handleClick();
+return (
+    <div className="drumContainer">
+        {
+            drumMap.map(drum => 
+                <DrumSound
+                    key={drum.name}
+                    dataKey={drum.key}
+                    drumButtonName={drum.letter}
+                    drumAudio={drum.sound}
+                    />
+            )
         }
-    }
-
-
-    return (
-        <div className="container">
-           <ImageMapper
-                src={IMAGE_URL}
-                map={AREA_MAP}
-                width={800}
-                height={500}
-                imgWidth={800}
-                parentWidth={800}
-                responsive={true}
-
-                onClick={() => {isDrumClick(true)}}
-                onTouchStart={() => {isDrumClick(true)}}
-                onImageClick={() => {isDrumClick(false)}} //Outside area clicks
-            />
-            <audio></audio>
-
-        </div>
-    )
+    </div>
+)
 }
+
 
 export default Drumset
 
