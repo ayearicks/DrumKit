@@ -1,21 +1,24 @@
 import { useEffect, useRef } from 'react'
 import useSound from 'use-sound';
 import './drumsound.scss'
+import { Howl, Howler } from 'howler'
 
 
 const DrumSound = (props) => { 
 
     const drumButton = useRef(null);
-    const [play] = useSound(props.drumAudio);
+    const playSound = new Howl({
+        src: [props.drumAudio]
+    });
 
     const handlePlay = (ev) => {
         if (ev.key === props.dataKey) {
-            play();
+            playSound.play();
             drumButton.current.classList.add('active');
         }
     }
     
-    const handleStop = (ev) => {
+    const handleStop = () => {
         drumButton.current.classList.remove('active');
     }
 
@@ -26,17 +29,14 @@ const DrumSound = (props) => {
             window.removeEventListener('keyup', handleStop);
             window.removeEventListener('keydown', handlePlay);
         }
-    }, []);
+    });
 
     
     return (
-        <div className="drumsound">
-            <button ref={drumButton} onClick={play} className={'DrumSound'}>
-                {props.drumButtonName}
-            </button>
-        </div>
+        <button ref={drumButton} onClick={() => {playSound.play()}} className={'DrumSound'}>
+            {props.drumButtonName}
+        </button>
     )
-
 
 }
 

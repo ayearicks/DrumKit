@@ -2,6 +2,7 @@ import './drumset.scss'
 import DrumSound from '../drumSound/DrumSound'
 
 
+
 const Drumset = () => {
 
     const drumMap = [
@@ -82,7 +83,9 @@ const Drumset = () => {
                         dataKey={drum.key}
                         drumButtonName={drum.letter}
                         drumAudio={drum.sound}
-                    />
+                    />,
+
+                    
                 )
             }
         </div>

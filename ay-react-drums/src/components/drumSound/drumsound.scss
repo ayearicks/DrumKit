@@ -17,5 +17,6 @@ button:hover {
 }
 
 .active {
-    background-color: green;
+    background-color: var(--blueGreen);
+    border-color: var(--opal);
 }
