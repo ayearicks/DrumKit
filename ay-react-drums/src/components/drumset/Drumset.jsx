@@ -1,7 +1,7 @@
 import './drumset.scss'
 import DrumSound from '../drumSound/DrumSound'
 
-import HighHat from '../../7sounds/highhat.wav'
+import HighHat from '../../sounds/highhat.wav'
 import OpenHighHat from '../../sounds/openhat.wav'
 import Snare from '../../sounds/snare.wav'
 import Tom1 from '../../sounds/tom1.wav'
@@ -14,7 +14,6 @@ import RideBell from '../../sounds/ridebell.wav'
 import Crash14 from '../../sounds/crash14.wav'
 
 const Drumset = () => {
-
 
 
 const drumMap = [
@@ -95,7 +94,7 @@ return (
                     dataKey={drum.key}
                     drumButtonName={drum.letter}
                     drumAudio={drum.sound}
-                    />
+                />
             )
         }
     </div>
