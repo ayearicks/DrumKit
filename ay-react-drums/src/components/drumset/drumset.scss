@@ -1,13 +1,14 @@
 .container {
-    width: 800px;
-    height: 500px;
+    width: 60rem;
+    height: 30rem;
     border-radius: 10px;
     box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
-    background-image: url('../images/blackandwhitedrumset.jpg');
+    background-image: url('../../images/blackandwhitedrumset.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
 
